@@ -1,6 +1,9 @@
 <template>
     <div class="hello">
         <h1>{{ msg }}</h1>
+        <h1>{{ computedMsg }}</h1>
+        <h1>{{ x }}</h1>
+        <h1>{{ y }}</h1>
         <p>
             For guide and recipes on how to configure / customize this project,<br>
             check out the
@@ -34,12 +37,32 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Model, Vue } from 'vue-property-decorator';
 
 @Component
-export default class HelloWorld extends Vue {
+export default class HelloWMoorld extends Vue {
+  // props
   @Prop()
   private msg!: string;
+
+  // data
+  private x: number = 1;
+  private y: string = '2';
+
+  // method
+  private greet() {
+    console.log('greeting: ' + this.msg);
+  }
+
+  // computed
+  private get computedMsg() {
+    return 'computed ' + this.msg;
+  }
+
+  // lifecycle
+  mounted() {
+    this.greet();
+  }
 }
 </script>
 
