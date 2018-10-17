@@ -1,26 +1,2 @@
-# vue-cli-3
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+# ts-vue-starterkit
+开箱即用的webpack 4+,ts 3+,vue 2.5+ 的模板
