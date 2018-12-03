@@ -1,7 +1,9 @@
 <template>
     <div class="home">
         <img alt="Vue logo" src="../assets/logo.png">
-        <HelloWorld :obj="objs" @clicks="onClick"/>
+        <Theme>
+            <HelloWorld :obj="objs" @clicks="onClick"/>
+        </Theme>
     </div>
 </template>
 
@@ -9,10 +11,12 @@
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 import { Route } from 'vue-router';
+import Theme from '../components/theme.vue'
 
 @Component({
   components: {
     HelloWorld,
+    Theme
   },
 })
 export default class Home extends Vue {

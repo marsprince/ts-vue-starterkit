@@ -1,3 +1,4 @@
+import "@babel/polyfill";
 import './hooks';
 import Vue from 'vue';
 import App from './App.vue';

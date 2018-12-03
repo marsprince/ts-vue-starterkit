@@ -1,11 +1,16 @@
 /* eslint-disable*/
 process.env.NODE_ENV = 'production';
+const path = require('path');
 const merge = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.base.config');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const config = require('./config');
+
+function resolve(dir) {
+  return path.join(__dirname, '..', dir);
+}
 
 const webpackConfig = merge(baseWebpackConfig, {
     mode: 'production',
