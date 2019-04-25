@@ -12,6 +12,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "outDir": "./dist/out-tsc",
+    "noImplicitAny": false,
     "types": [
       "webpack-env"
     ],
