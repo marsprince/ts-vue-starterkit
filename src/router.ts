@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router, { RouterOptions } from 'vue-router';
 import Home from './views/Home.vue';
+import Mobx from './views/Mobx.vue';
 
 Vue.use(Router);
 
@@ -16,11 +17,13 @@ const routerOptions: RouterOptions = {
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () =>
-        import(/* webpackChunkName: "about" */ './views/About.vue'),
+        import('./views/About.vue'),
+    },
+    {
+      path: '/mbox',
+      name: 'mobx',
+      component: Mobx,
     }
   ],
 };
