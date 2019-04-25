@@ -1,8 +1,8 @@
 <template>
     <div class="home">
         <img alt="Vue logo" src="../assets/logo.png">
-        <Theme>
-            <HelloWorld :obj="objs" @clicks="onClick"/>
+        <Theme :obj="objs" >
+            <HelloWorld @clicks="onClick" id="123"/>
         </Theme>
     </div>
 </template>
@@ -16,7 +16,7 @@ import Theme from '../components/theme.vue'
 @Component({
   components: {
     HelloWorld,
-    Theme
+    Theme,
   },
 })
 export default class Home extends Vue {
