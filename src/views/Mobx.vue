@@ -1,3 +1,8 @@
+<template>
+  <button @click="setAge">
+    {{model.age}}{{other}}
+  </button>
+</template>
 <script>
   import { observable, computed, action } from "mobx";
   import { observer } from "mobx-vue";
@@ -20,7 +25,24 @@
   export default observer({
     name: "App",
     data() {
-      return { model: new Model() };
+      return {
+        model: new Model(),
+        other: 1
+      };
+    },
+    methods: {
+      setAge() {
+        this.model.age ++
+        this.other++
+      }
+    },
+    watch: {
+      other: function(val) {
+        console.log(val);
+      },
+      model: function(val) {
+        console.log(val);
+      }
     },
     beforeCreate() {
       console.log("before create");
@@ -33,18 +55,15 @@
     },
     updated() {
       console.log("updatedddd");
-    },
-    render(h) {
-      return h("button", {
-        on: { click: this.model.setAge },
-        domProps: { textContent: this.model.age }
-      });
     }
   });
 </script>
 <style lang="scss">
   button {
-    width: 80px;
+    width: 100%;
     height: 44px;
+    background: #667f1c;
+    font-size: 18px;
+    line-height: 44px;
   }
 </style>

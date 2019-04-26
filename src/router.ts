@@ -21,7 +21,7 @@ const routerOptions: RouterOptions = {
         import('./views/About.vue'),
     },
     {
-      path: '/mbox',
+      path: '/mobx',
       name: 'mobx',
       component: Mobx,
     }
