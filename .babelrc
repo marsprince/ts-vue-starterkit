@@ -12,9 +12,10 @@
     [
       "@babel/plugin-proposal-class-properties",
       {
-        loose: true
+        "loose": true
       }
-    ]
+    ],
+    "@razors/babel-plugin-safe-object"
     //    [
     //      "@babel/plugin-transform-runtime",
     //      {

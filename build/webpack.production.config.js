@@ -14,6 +14,9 @@ function resolve(dir) {
 
 const webpackConfig = merge(baseWebpackConfig, {
     mode: 'production',
+    optimization: {
+      minimize: false
+    },
     // 输出
     output: {
         path: resolve('dist'),

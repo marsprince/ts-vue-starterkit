@@ -4,15 +4,23 @@
     </div>
 </template>
 <script>
+  function test(target, key, descriptor) {
+    console.log(target,key,descriptor)
+    return descriptor
+  }
   export default {
     data() {
       return {
-        age: 1
+        age: 1,
+        yyf:{}
       }
     },
     methods: {
+      @test
       setAge() {
-        this.age++
+        this.age++;
+        const yyf = this.yyf
+        yyf.x.y = 1
       }
     },
     beforeCreate() {

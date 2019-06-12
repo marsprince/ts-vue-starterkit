@@ -1,5 +1,5 @@
 <template>
-  <button @click="setAge">
+  <button @click="model.setAge">
     {{model.age}}{{other}}
   </button>
 </template>
